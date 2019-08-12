@@ -1,3 +1,48 @@
-body{
-    font-family: 'Red Hat Text', sans-serif;
+h1 {
+  font-size: 23px;
+  color: #4a4a4a;
+  font-weight: 700;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.container {
+  background-color: #f8f8f8;
+}
+.container .box {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container .box #profile_box {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  width: 20%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .box #profile_box #picture {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .box #profile_box #picture img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */

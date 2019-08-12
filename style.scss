@@ -1,0 +1,46 @@
+@import 'mixins/mixins';
+@import 'mixins/fonts';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0px;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.container{
+    background-color: #f8f8f8;
+    
+
+    .box{
+        background-color: #f8f8f8;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        #profile_box{
+            background-color: white;
+            padding: 20px;
+            margin:20px;
+            width: 20%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+            @include center();
+            flex-direction: column;
+            #picture{
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                    // box-shadow: 0 2px 15px 1px rgba(0,0,0,0.3);
+                    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+
+                }
+            }
+
+        }
+
+    }
+}
