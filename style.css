@@ -16,13 +16,23 @@ body {
 .container {
   background-color: #f8f8f8;
 }
-.container .box {
+.container #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.container #header img {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 30%;
+}
+.container #box {
   background-color: #f8f8f8;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.container .box #profile_box {
+.container #box #profile_box {
   background-color: white;
   padding: 20px;
   margin: 20px;
@@ -34,15 +44,19 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.container .box #profile_box #picture {
+.container #box #profile_box #picture {
   width: 45%;
   margin-left: auto;
   margin-right: auto;
 }
-.container .box #profile_box #picture img {
+.container #box #profile_box #picture img {
   width: 100%;
   border-radius: 50%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.displayNone {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
