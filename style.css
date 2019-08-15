@@ -29,9 +29,14 @@ a :hover {
   color: #ADD929;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
   #profile_box {
     width: 20%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #profile_box {
+    width: 100%;
   }
 }
 * {
@@ -130,7 +135,7 @@ body {
 }
 .container #modal_container #large_profile .exit {
   position: relative;
-  top: -10px;
+  top: -5px;
   left: 180px;
 }
 .container #modal_container #large_profile .exit .exit_button {
@@ -139,6 +144,7 @@ body {
 }
 .container #modal_container #large_profile .exit .exit_button .fas {
   font-size: 2em;
+  color: #0092BE;
 }
 .container #modal_container #large_profile .top {
   width: 100%;
