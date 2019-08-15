@@ -2,6 +2,10 @@ body {
   font-size: 12px;
 }
 
+p {
+  font-size: 1 em;
+}
+
 h1 {
   font-size: 1.5em;
   font-weight: 700;
@@ -18,6 +22,18 @@ h3 {
   color: #4a4a4a;
 }
 
+a {
+  color: #0092BE;
+}
+a :hover {
+  color: #ADD929;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  #profile_box {
+    width: 20%;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -159,6 +175,9 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.container #modal_container #large_profile .channels i {
+  font-size: 2em;
 }
 
 .displayNone {

@@ -2,6 +2,10 @@ body{
     font-size: 12px;
 
 }
+
+p{
+    font-size: 1.1 em;
+}
 h1{
     font-size: 1.5em;
     font-weight: 700;
@@ -18,4 +22,11 @@ h3{
     font-size: 1.1em;
         color: #4a4a4a;
 
+}
+
+a{
+    color:#0092BE;
+    :hover{
+        color: #ADD929;
+    }
 }

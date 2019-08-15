@@ -1,5 +1,6 @@
 @import 'mixins/mixins';
 @import 'mixins/fonts';
+@import 'mixins/mediaquerys';
 
 *{
     box-sizing: border-box;
@@ -142,6 +143,9 @@ body{
                 width: 70%;
                 margin:20px 0px 10px;
                 @include space();
+                i{
+                    font-size: 2em;
+                }
             }
 
             
