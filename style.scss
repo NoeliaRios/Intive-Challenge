@@ -7,10 +7,12 @@
 body{
     margin:0px;
     font-family: 'Red Hat Text', sans-serif;
+    
 }
 
 .container{
-    background-color: #f8f8f8;
+    background-image: linear-gradient(to bottom, #bdc3c7, #96a0a7, #707e89, #4d5d6c, #2c3e50);
+    
     height: auto;
 
     #header{
@@ -25,59 +27,133 @@ body{
     
 
     #box{
-        background-color: #f8f8f8;
+        
         display:flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-around;       
         #profile_box{
-            background-color: white;
+            background-color: #FAF8FF;
             padding: 20px;
-            margin:20px;
-            width: 20%;
+            margin:10px;
+            width: 16%;
             border-radius: 5px;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+            box-shadow: 0 5px 9px 0 rgba(0,0,0,.5);
             @include center();
-            flex-direction: column;
+            flex-direction: column;    
             .picture{
-                width: 45%;
+                width: 40%;
                 margin-left: auto;
                 margin-right: auto;
                 img{
                     width: 100%;
                     border-radius: 50%;
-                    // box-shadow: 0 2px 15px 1px rgba(0,0,0,0.3);
                     box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-
                 }
+            }
+
+            h1{
+                margin:5px;
+            }
+            h2{
+                margin:0px;
+            }
+            .fas{
+                margin:0px 5px;
             }
 
         }
 
     }
 
+    #modal_container{
+        width:100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index: 20;
+        overflow: auto;
+        height: 100vh;
+        background: rgba(8,28,36,.98);
+        @include center();
 
-    #large_profile{
-        background-color: white;
+        #large_profile{
+            background-color: #FAF8FF;     
+            width:30%;
+            height:70%;
             padding: 20px;
             margin:20px;
             border-radius: 5px;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-            @include center();
+            @include space();
             flex-direction: column;
-            .profile_focus{
-                width: 30%;
-                margin-left: auto;
-                margin-right: auto;
-                img{
-                    width: 100%;
-                    border-radius: 50%;
-                    // box-shadow: 0 2px 15px 1px rgba(0,0,0,0.3);
-                    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
 
+            .username{
+                margin:5px;
+            }
+            .name{
+                margin:0px;
+            }
+            .email{
+                margin:0px;
+            }
+
+            .exit{
+                position:relative;
+                top: -10px;
+                left:180px;
+                .exit_button{
+                    background-color: transparent;
+                    border: none;
+                    .fas{
+                        font-size: 2em;
+
+                    }
                 }
             }
+
+            .top{
+                width:100%;
+                @include space();
+                flex-direction: row;
+                .photo_div{
+                    width:60%;
+                        img{
+                            width:100%;
+                            height: auto;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+                        }
+                }
+            }
+
+            .info{
+                @include center();
+                flex-direction: column;
+                .lorem{
+                    font-style: italic;
+                    text-align: justify;
+                }
+                h1{
+                    margin:5px;
+                }
+            }
+
+            .channels{
+                width: 70%;
+                margin:20px 0px 10px;
+                @include space();
+            }
+
+            
+        
+            
+        }   
     }
+    
 }
+
+
+
 
 .displayNone{
     display: none !important;
