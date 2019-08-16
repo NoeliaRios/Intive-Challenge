@@ -9,7 +9,6 @@ body {
 }
 .container {
     background-image: url('https://www.kms-team.com/sites/default/files/element/image/blstream_teaser_04_plakat_vollflaechig_blau_2000x1125_170117.jpg');
-    // background-image: linear-gradient(to bottom,#bdc3c7,#96a0a7,#707e89,#4d5d6c,#2c3e50);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -55,7 +54,7 @@ body {
             h2 {
                 margin: 0px;
             }
-            h3{
+            h3 {
                 text-transform: capitalize;
                 text-align: center;
             }
@@ -148,14 +147,22 @@ body {
 }
 @media only screen and (max-width:1024px) {
     .container {
-        #box {
-            #profile_box {
-                width: 20%;
+        #modal_container {
+            #large_profile {
+                width: 70%;
             }
         }
-
-        #modal_container{
-            #large_profile{
+    }
+}
+@media only screen and (max-width:768px) {
+    .container {
+        #box {
+            #profile_box {
+                width: 30%;
+            }
+        }
+        #modal_container {
+            #large_profile {
                 width: 80%;
             }
         }
@@ -171,9 +178,8 @@ body {
                 width: 100%;
             }
         }
-
-        #modal_container{
-            #large_profile{
+        #modal_container {
+            #large_profile {
                 width: 100%;
             }
         }

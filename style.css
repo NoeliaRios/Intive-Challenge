@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  font-size: 1.1 em;
+  font-size: 1 em;
 }
 
 h1 {
@@ -191,8 +191,13 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .container #modal_container #large_profile {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
   .container #box #profile_box {
-    width: 20%;
+    width: 30%;
   }
   .container #modal_container #large_profile {
     width: 80%;
