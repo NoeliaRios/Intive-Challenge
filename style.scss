@@ -1,177 +1,181 @@
 @import 'mixins/mixins';
 @import 'mixins/fonts';
-
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    margin:0px;
-    font-family: 'Red Hat Text', sans-serif;
-    
+body {
+    margin: 0px;
+    font-family: 'Red Hat Text',sans-serif;
 }
-
-.container{
-    background-image: linear-gradient(to bottom, #bdc3c7, #96a0a7, #707e89, #4d5d6c, #2c3e50);
-    
+.container {
+    background-image: url('https://www.kms-team.com/sites/default/files/element/image/blstream_teaser_04_plakat_vollflaechig_blau_2000x1125_170117.jpg');
+    // background-image: linear-gradient(to bottom,#bdc3c7,#96a0a7,#707e89,#4d5d6c,#2c3e50);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     height: auto;
-
-    #header{
-        
-        @include center();
-        padding:30px;
-        img{
+    #header {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        width: 80%;
+        img {
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-            width: 30%;
+            width: 100%;
+            height: auto;
         }
     }
-    
-
-    #box{
-        
-        display:flex;
+    #box {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;       
-        #profile_box{
+        justify-content: space-around;
+        #profile_box {
             background-color: #FAF8FF;
             padding: 20px;
-            margin:10px;
+            margin: 10px;
             width: 16%;
             border-radius: 5px;
             box-shadow: 0 5px 9px 0 rgba(0,0,0,.5);
             @include center();
-            flex-direction: column;    
-            .picture{
+            flex-direction: column;
+            .picture {
                 width: 40%;
                 margin-left: auto;
                 margin-right: auto;
-                img{
+                img {
                     width: 100%;
                     border-radius: 50%;
                     box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
                 }
             }
-
-            h1{
-                margin:5px;
+            h1 {
+                margin: 5px 0px 0px;
+                text-transform: capitalize;
             }
-            h2{
-                margin:0px;
+            h2 {
+                margin: 0px;
             }
-            .fas{
-                margin:0px 5px;
+            h3{
+                text-transform: capitalize;
+                text-align: center;
             }
-
+            .fas {
+                margin: 0px 5px;
+            }
         }
-
     }
-
-    #modal_container{
-        width:100%;
+    #modal_container {
+        width: 100%;
         position: fixed;
-        top:0;
+        top: 0;
         left: 0;
         z-index: 20;
         overflow: auto;
         height: 100vh;
         background: rgba(8,28,36,.98);
         @include center();
-
-        #large_profile{
-            background-color: #FAF8FF;     
-            width:30%;
-            height:70%;
+        #large_profile {
+            background-color: #FAF8FF;
+            width: 30%;
+            height: 70%;
             padding: 20px;
-            margin:20px;
+            margin: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
             @include space();
             flex-direction: column;
-
-            .username{
-                margin:5px;
+            .username {
+                margin: 5px;
             }
-            .name{
-                margin:0px;
+            .name {
+                margin: 0px;
             }
-            .email{
-                margin:0px;
+            .email {
+                margin: 0px;
             }
-
-            .exit{
-                position:relative;
+            .exit {
+                position: relative;
                 top: -5px;
-                left:180px;
-                .exit_button{
+                left: 49%;
+                .exit_button {
                     background-color: transparent;
                     border: none;
-                    .fas{
+                    .fas {
                         font-size: 2em;
-                        color:#0092BE;
+                        color: #0092BE;
                     }
                 }
             }
-
-            .top{
-                width:100%;
+            .top {
+                width: 100%;
                 @include space();
                 flex-direction: row;
-                .photo_div{
-                    width:60%;
-                        img{
-                            width:100%;
-                            height: auto;
-                            border-radius: 50%;
-                            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-                        }
+                .photo_div {
+                    width: 60%;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 50%;
+                        box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+                    }
                 }
             }
-
-            .info{
+            .info {
                 @include center();
                 flex-direction: column;
-                .lorem{
+                .lorem {
                     font-style: italic;
                     text-align: justify;
                 }
-                h1{
-                    margin:5px;
+                h1 {
+                    margin: 5px;
+                    text-transform: capitalize;
                 }
             }
-
-            .channels{
+            .channels {
                 width: 70%;
-                margin:20px 0px 10px;
+                margin: 20px 0px 10px;
                 @include space();
-                i{
+                i {
                     font-size: 2em;
                 }
             }
-
-            
-        
-            
-        }   
+        }
     }
-    
 }
-
-
-.displayNone{
+.displayNone {
     display: none !important;
 }
+@media only screen and (max-width:1024px) {
+    .container {
+        #box {
+            #profile_box {
+                width: 20%;
+            }
+        }
 
-@media only screen and (min-width :600px) and (max-width : 1024px){
-
-    #profile_box{
-        width: 20%;
+        #modal_container{
+            #large_profile{
+                width: 80%;
+            }
+        }
     }
-
 }
+@media only screen and (max-width:600px) {
+    .container {
+        #header {
+            width: 100%;
+        }
+        #box {
+            #profile_box {
+                width: 100%;
+            }
+        }
 
-@media only screen and (max-width: 600px){
-    #profile_box{
-        width: 100%;
+        #modal_container{
+            #large_profile{
+                width: 100%;
+            }
+        }
     }
 }
-
-

@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  font-size: 1 em;
+  font-size: 1.1 em;
 }
 
 h1 {
@@ -39,18 +39,22 @@ body {
 }
 
 .container {
-  background-image: linear-gradient(to bottom, #bdc3c7, #96a0a7, #707e89, #4d5d6c, #2c3e50);
+  background-image: url("https://www.kms-team.com/sites/default/files/element/image/blstream_teaser_04_plakat_vollflaechig_blau_2000x1125_170117.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   height: auto;
 }
 .container #header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 30px;
+  width: 80%;
 }
 .container #header img {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  width: 30%;
+  width: 100%;
+  height: auto;
 }
 .container #box {
   display: flex;
@@ -80,10 +84,15 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 .container #box #profile_box h1 {
-  margin: 5px;
+  margin: 5px 0px 0px;
+  text-transform: capitalize;
 }
 .container #box #profile_box h2 {
   margin: 0px;
+}
+.container #box #profile_box h3 {
+  text-transform: capitalize;
+  text-align: center;
 }
 .container #box #profile_box .fas {
   margin: 0px 5px;
@@ -126,7 +135,7 @@ body {
 .container #modal_container #large_profile .exit {
   position: relative;
   top: -5px;
-  left: 180px;
+  left: 49%;
 }
 .container #modal_container #large_profile .exit .exit_button {
   background-color: transparent;
@@ -164,6 +173,7 @@ body {
 }
 .container #modal_container #large_profile .info h1 {
   margin: 5px;
+  text-transform: capitalize;
 }
 .container #modal_container #large_profile .channels {
   width: 70%;
@@ -180,13 +190,22 @@ body {
   display: none !important;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-  #profile_box {
+@media only screen and (max-width: 1024px) {
+  .container #box #profile_box {
     width: 20%;
+  }
+  .container #modal_container #large_profile {
+    width: 80%;
   }
 }
 @media only screen and (max-width: 600px) {
-  #profile_box {
+  .container #header {
+    width: 100%;
+  }
+  .container #box #profile_box {
+    width: 100%;
+  }
+  .container #modal_container #large_profile {
     width: 100%;
   }
 }
